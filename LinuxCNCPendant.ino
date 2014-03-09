@@ -4,10 +4,10 @@
    *                                        *
    *----------> LINUXCNC PENDANT <----------*
    *                                        *
-   *             V 1.0 RELEASE              *
+   *             V 1.1 RELEASE              *
    ******************************************
    THIS IS A RELEASE! I'm never resposibly for any damage to your stuff! This version is completely tested.
-   This pendant works only with EMC/LinuxCNC and not with other CNC programs! 
+   This pendant works only with EMC/LinuxCNC and not with other CNC control programs! 
    
    (c) Dylan Van Assche (2014).
 */
@@ -66,7 +66,7 @@ void loop() {
         break;
 
       case '6':
-        Keyboard.write(218); // Y+
+        Keyboard.press(218); // Y+
         break;
 
       case '7':
@@ -74,11 +74,11 @@ void loop() {
         break;
 
       case '8':
-        Keyboard.write(211); // Z+
+        Keyboard.press(211); // Z+
         break;
 
       case '9':
-        Keyboard.write(216); // X-
+        Keyboard.press(216); // X-
         break;
 
       case 'A':
@@ -101,11 +101,11 @@ void loop() {
         break;
 
       case 'B':
-        Keyboard.write(215); // X+
+        Keyboard.press(215); // X+
         break;
 
       case 'C':
-        Keyboard.write(214); // Z-
+        Keyboard.press(214); // Z-
         break;
 
       case 'D':
@@ -113,7 +113,7 @@ void loop() {
         break;
 
       case 'E':
-        Keyboard.write(217); // Y-
+        Keyboard.press(217); // Y-
         break;
 
       case 'F':
@@ -146,5 +146,8 @@ void loop() {
         break;
     }
   }
+  else
+  {
+    Keyboard.releaseAll();
+  }
 }
-
