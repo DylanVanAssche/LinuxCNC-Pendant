@@ -13,3 +13,8 @@ Software
 --------
 
 * The Arduino sketch you can find in this Github repository.
+
+BUGS
+----
+
+* The movement of the axis with the arrows contains a bug.
